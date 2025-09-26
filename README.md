@@ -1,50 +1,107 @@
-# Welcome to your Expo app 👋
+# Bienvenido a CareAlarm 🚨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Esta es una aplicación [Expo](https://expo.dev) creada para el monitoreo y gestión de alarmas de cuidado.
 
-## Get started
+## Comenzar
 
-1. Install dependencies
+### 1. Instalar dependencias
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-2. Start the app
+### 2. Ejecutar la aplicación localmente
 
-   ```bash
-   npx expo start
-   ```
+```bash
+npx expo start
+```
 
-In the output, you'll find options to open the app in a
+En la salida, encontrarás opciones para abrir la aplicación en:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- [Build de desarrollo](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Emulador de Android](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [Simulador de iOS](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), un entorno limitado para probar el desarrollo de aplicaciones con Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 3. Generar APK
 
-## Get a fresh project
+Para generar un APK de la aplicación:
 
-When you're ready, run:
+```bash
+# Instalar EAS CLI
+npm install -g eas-cli
+
+# Iniciar sesión en Expo
+eas login
+
+# Construir APK
+eas build --platform android --profile preview
+```
+
+## 🔐 Información de Login
+
+**IMPORTANTE**: Para acceder a la aplicación, utiliza las siguientes credenciales de prueba:
+
+- **Email**: Cualquier email válido (formato: usuario@ejemplo.com)
+- **Contraseña**: Cualquier contraseña (mínimo 6 caracteres)
+
+*Nota: La aplicación está configurada con autenticación simulada para propósitos de desarrollo.*
+
+## Desarrollo
+
+Puedes comenzar a desarrollar editando los archivos dentro del directorio **app**. Este proyecto utiliza [enrutamiento basado en archivos](https://docs.expo.dev/router/introduction).
+
+### Estructura del proyecto
+
+- `app/` - Páginas y navegación de la aplicación
+- `components/` - Componentes reutilizables
+- `constants/` - Constantes y temas
+- `contexts/` - Contextos de React (autenticación, etc.)
+- `assets/` - Imágenes e iconos
+
+## Obtener un proyecto limpio
+
+Cuando estés listo, ejecuta:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Este comando moverá el código inicial al directorio **app-example** y creará un directorio **app** en blanco donde puedes comenzar a desarrollar.
 
-## Learn more
+## Comandos útiles
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+# Iniciar en Android
+npm run android
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+# Iniciar en iOS
+npm run ios
 
-## Join the community
+# Iniciar en web
+npm run web
 
-Join our community of developers creating universal apps.
+# Linting
+npm run lint
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Aprender más
+
+Para aprender más sobre el desarrollo de tu proyecto con Expo, consulta los siguientes recursos:
+
+- [Documentación de Expo](https://docs.expo.dev/): Aprende los fundamentos o profundiza en temas avanzados con nuestras [guías](https://docs.expo.dev/guides).
+- [Tutorial de Expo](https://docs.expo.dev/tutorial/introduction/): Sigue un tutorial paso a paso donde crearás un proyecto que funciona en Android, iOS y web.
+
+## Únete a la comunidad
+
+Únete a nuestra comunidad de desarrolladores que crean aplicaciones universales.
+
+- [Expo en GitHub](https://github.com/expo/expo): Ve nuestra plataforma de código abierto y contribuye.
+- [Comunidad de Discord](https://chat.expo.dev): Chatea con usuarios de Expo y haz preguntas.
+
+## Tecnologías utilizadas
+
+- **Expo Router** - Navegación basada en archivos
+- **React Native Paper** - Componentes de UI
+- **TypeScript** - Tipado estático
+- **Expo** - Plataforma de desarrollo
